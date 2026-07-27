@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
-import BackgroundAudio from './components/BackgroundAudio.jsx'
 import Intro from './components/Intro.jsx'
 import { useLanguage } from './context/LanguageContext.jsx'
 
@@ -19,7 +18,6 @@ export default function App() {
   return (
     <>
       <Header />
-      <BackgroundAudio />
       <Intro />
       <Routes>
         <Route path="/" element={<Hero />} />

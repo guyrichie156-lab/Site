@@ -2,14 +2,7 @@ import { useLayoutEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { useLanguage } from '../context/LanguageContext.jsx'
 
-/**
- * Вступительный экран-заглушка.
- *
- * Зачем нужен, помимо эстетики: браузеры блокируют autoplay со звуком без
- * жеста пользователя. Клик по "войти" — тот самый жест, который разрешает
- * BackgroundAudio запустить трек (он сам слушает первый pointerdown/keydown
- * на window, отдельная синхронизация не нужна).
- */
+/** Вступительный экран-заглушка: клик по "войти" плавно открывает сайт. */
 export default function Intro() {
   const { t } = useLanguage()
   const [hidden, setHidden] = useState(false)
