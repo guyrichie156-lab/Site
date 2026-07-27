@@ -94,7 +94,7 @@ export default function Header() {
         {/* левый угол — связь */}
         <Link
           to="/contact"
-          className="border border-ink/20 rounded-full px-4 py-1.5 transition-colors duration-300 hover:bg-ink hover:text-paper"
+          className="border border-ink/20 rounded-full px-4 py-1.5 backdrop-blur-sm transition-colors duration-300 hover:bg-ink hover:text-paper"
         >
           {t('header.contact')}
         </Link>
@@ -104,7 +104,7 @@ export default function Header() {
           <button
             onClick={toggleMenu}
             aria-expanded={open}
-            className="border border-ink/20 rounded-full px-5 py-1.5 transition-colors duration-300 hover:bg-ink hover:text-paper"
+            className="border border-ink/20 rounded-full px-5 py-1.5 backdrop-blur-sm transition-colors duration-300 hover:bg-ink hover:text-paper"
           >
             <span ref={labelRef} className="inline-block">
               {open ? t('header.close') : t('header.menu')}

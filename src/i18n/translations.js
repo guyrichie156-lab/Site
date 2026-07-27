@@ -6,7 +6,11 @@ export const translations = {
       close: 'закрыть',
     },
     intro: {
+      kicker: 'darkklra · site',
+      loading: 'загрузка',
       enter: 'войти',
+      hint: 'нажми enter',
+      entering: 'вход',
     },
     nav: {
       home: 'главная',
@@ -15,9 +19,9 @@ export const translations = {
       contact: 'контакт',
     },
     hero: {
-      country: 'минск, беларусь',
-      alias: 'solo zxc ghoul',
-      marquee: 'геймер — инженер на производстве — иду в it — ',
+      country: 'могилёв, беларусь',
+      alias: 'darkklra',
+      marquee: 'chillvibe — positivevibe — clear mind — ',
     },
     pages: {
       contactStub: 'страница контактов — в разработке',
@@ -32,7 +36,11 @@ export const translations = {
       close: 'close',
     },
     intro: {
+      kicker: 'darkklra · site',
+      loading: 'loading',
       enter: 'enter',
+      hint: 'press enter',
+      entering: 'entering',
     },
     nav: {
       home: 'home',
@@ -41,9 +49,9 @@ export const translations = {
       contact: 'contact',
     },
     hero: {
-      country: 'minsk, belarus',
-      alias: 'solo zxc ghoul',
-      marquee: 'gamer — industrial engineer — heading into it — ',
+      country: 'mogilev, belarus',
+      alias: 'darkklra',
+      marquee: 'chillvibe — positivevibe — clear mind — ',
     },
     pages: {
       contactStub: 'contact page — under construction',

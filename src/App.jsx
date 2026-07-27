@@ -19,12 +19,14 @@ export default function App() {
     <>
       <Header />
       <Intro />
-      <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/contact" element={<Stub textKey="pages.contactStub" />} />
-        <Route path="/works" element={<Stub textKey="pages.worksStub" />} />
-        <Route path="/about" element={<Stub textKey="pages.aboutStub" />} />
-      </Routes>
+      <div id="site-root">
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/contact" element={<Stub textKey="pages.contactStub" />} />
+          <Route path="/works" element={<Stub textKey="pages.worksStub" />} />
+          <Route path="/about" element={<Stub textKey="pages.aboutStub" />} />
+        </Routes>
+      </div>
     </>
   )
 }

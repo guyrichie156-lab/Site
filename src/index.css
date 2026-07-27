@@ -3,9 +3,9 @@
 /* Tailwind v4: конфигурация прямо в CSS через @theme
    (tailwind.config.js в v4 не нужен) */
 @theme {
-  --color-paper: #fefefe;
-  --color-ink: #111111;
-  --color-muted: #8a8a8a;
+  --color-paper: #14100f;
+  --color-ink: #f4ece3;
+  --color-muted: #9b9086;
   --font-mono-ui: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --font-display: "Unbounded", "JetBrains Mono", ui-monospace, sans-serif;
 }
@@ -29,4 +29,46 @@ a:focus-visible {
 ::selection {
   background: var(--color-ink);
   color: var(--color-paper);
+}
+
+@keyframes bg-drift-a {
+  0%, 100% { transform: translate3d(-4%, -2%, 0) scale(1.05) }
+  50%      { transform: translate3d(5%, 4%, 0) scale(1.18) }
+}
+@keyframes bg-drift-b {
+  0%, 100% { transform: translate3d(4%, 3%, 0) scale(1.12) }
+  50%      { transform: translate3d(-5%, -3%, 0) scale(1) }
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: -20%;
+  z-index: -2;
+  pointer-events: none;
+}
+body::before {
+  background: radial-gradient(48% 44% at 26% 30%, oklch(0.64 0.11 42 / 0.55), transparent 70%);
+  animation: bg-drift-a 30s ease-in-out infinite;
+}
+body::after {
+  background: radial-gradient(46% 42% at 76% 70%, oklch(0.56 0.1 330 / 0.5), transparent 68%);
+  animation: bg-drift-b 38s ease-in-out infinite;
+}
+/* дымка у нижнего края + виньетка — на html, чтобы не занимать третий слой у body */
+html::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 92% at 50% 42%, transparent 44%, rgba(14, 9, 11, 0.62) 100%),
+    linear-gradient(180deg, transparent 40%, oklch(0.44 0.07 20 / 0.3) 76%, oklch(0.32 0.06 350 / 0.36) 100%);
+  background-size: 100% 100%, 100% 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before, body::after { animation: none }
 }
