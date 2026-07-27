@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/* Tailwind v4: конфигурация прямо в CSS через @theme
+   (tailwind.config.js в v4 не нужен) */
+@theme {
+  --color-paper: #fefefe;
+  --color-ink: #111111;
+  --color-muted: #8a8a8a;
+  --font-mono-ui: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-display: "Unbounded", "JetBrains Mono", ui-monospace, sans-serif;
+}
+
+html,
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-mono-ui);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Убираем нативный outline, добавляем свой для доступности */
+button:focus-visible,
+a:focus-visible {
+  outline: 1px dashed var(--color-ink);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* минималистичный слайдер громкости — тонкая линия + маленький кружок-thumb,
+   в тон остальным pill-контролам сайта */
+.sound-range {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 2px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-ink) 20%, transparent);
+  cursor: pointer;
+}
+
+.sound-range::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--color-ink);
+  transition: transform 0.15s ease;
+}
+
+.sound-range::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.sound-range::-moz-range-thumb {
+  width: 11px;
+  height: 11px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-ink);
+  transition: transform 0.15s ease;
+}
+
+.sound-range::-moz-range-thumb:hover {
+  transform: scale(1.2);
+}
+
+.sound-range::-moz-range-track {
+  height: 2px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-ink) 20%, transparent);
+}
