@@ -1,6 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
+import About from './components/About.jsx'
+import Contact from './components/Contact.jsx'
 import Intro from './components/Intro.jsx'
 import { useLanguage } from './context/LanguageContext.jsx'
 
@@ -22,9 +24,9 @@ export default function App() {
       <div id="site-root">
         <Routes>
           <Route path="/" element={<Hero />} />
-          <Route path="/contact" element={<Stub textKey="pages.contactStub" />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/works" element={<Stub textKey="pages.worksStub" />} />
-          <Route path="/about" element={<Stub textKey="pages.aboutStub" />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </>

@@ -23,10 +23,24 @@ export const translations = {
       alias: 'darkklra',
       marquee: 'chillvibe — positivevibe — clear mind — ',
     },
+    about: {
+      bio: 'работаю на «светоприборе» инженером-технологом то — устроился в сентябре 2025-го, диплом получил в том же году. руки заточены под cad/cam, параллельно осваиваю it — пока на уровне «руками потрогал».',
+      groups: [
+        { title: 'cad/cam', items: ['creo', 'компас-3d', 'mastercam', 'solidworks', 'autocad'] },
+        { title: 'it', items: ['python', 'docker', 'kubernetes', 'jenkins', 'nginx', 'apache'] },
+        { title: 'медиа', items: ['premiere pro', 'photoshop'] },
+      ],
+    },
+    contact: {
+      note: 'пиши куда удобнее — быстрее всего отвечаю в telegram.',
+      phone: 'телефон',
+      whatsapp: 'whatsapp',
+      viber: 'viber',
+      telegram: 'telegram',
+      instagram: 'instagram',
+    },
     pages: {
-      contactStub: 'страница контактов — в разработке',
       worksStub: 'страница работ — в разработке',
-      aboutStub: 'страница обо мне — в разработке',
     },
   },
   en: {
@@ -53,10 +67,24 @@ export const translations = {
       alias: 'darkklra',
       marquee: 'chillvibe — positivevibe — clear mind — ',
     },
+    about: {
+      bio: 'maintenance technologist engineer at "svetopribor" — joined in september 2025, got my degree the same year. day job runs on cad/cam, on the side i\'m picking up it — still at the hands-on-basics level.',
+      groups: [
+        { title: 'cad/cam', items: ['creo', 'kompas-3d', 'mastercam', 'solidworks', 'autocad'] },
+        { title: 'it', items: ['python', 'docker', 'kubernetes', 'jenkins', 'nginx', 'apache'] },
+        { title: 'media', items: ['premiere pro', 'photoshop'] },
+      ],
+    },
+    contact: {
+      note: 'reach out wherever is easiest — telegram gets the fastest reply.',
+      phone: 'phone',
+      whatsapp: 'whatsapp',
+      viber: 'viber',
+      telegram: 'telegram',
+      instagram: 'instagram',
+    },
     pages: {
-      contactStub: 'contact page — under construction',
       worksStub: 'works page — under construction',
-      aboutStub: 'about page — under construction',
     },
   },
 }
