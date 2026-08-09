@@ -6,11 +6,13 @@ const ACCENT = 'oklch(0.82 0.09 48)'
 
 // часы наиграно в steam, по убыванию
 const GAMES = [
+  { name: 'Dota 2', hours: 8062.4 },
   { name: 'Counter-Strike 2', hours: 1694.6 },
   { name: 'Rust', hours: 1218.6 },
   { name: 'STALZONE', hours: 1191.8 },
   { name: 'Apex Legends', hours: 516.8 },
   { name: 'PUBG: BATTLEGROUNDS', hours: 316.4 },
+  { name: 'Dead as Disco', hours: 32.5 },
 ]
 
 export default function About() {
