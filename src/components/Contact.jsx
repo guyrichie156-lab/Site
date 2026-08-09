@@ -60,20 +60,22 @@ export default function Contact() {
               data-reveal
               className="flex items-center justify-between gap-4 rounded-full border border-ink/20 px-5 py-3 backdrop-blur-sm"
             >
-              <div className="flex min-w-0 items-center gap-3 text-sm lowercase tracking-wide">
+              <div className="flex min-w-0 shrink-0 items-center gap-3 text-sm lowercase tracking-wide">
                 <span className="shrink-0 text-muted">
                   <ContactIcon name={c.icon} />
                 </span>
                 <span className="shrink-0 text-muted">{t(`contact.${c.key}`)}</span>
-                <span className="truncate tabular-nums">{c.value}</span>
               </div>
-              <button
-                onClick={() => copy(c.key, c.copy)}
-                aria-label="copy"
-                className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-muted transition-colors duration-200 hover:text-ink"
-              >
-                {copiedKey === c.key ? <CheckIcon /> : <CopyIcon />}
-              </button>
+              <div className="flex min-w-0 items-center gap-3">
+                <span className="truncate text-sm tabular-nums">{c.value}</span>
+                <button
+                  onClick={() => copy(c.key, c.copy)}
+                  aria-label="copy"
+                  className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-muted transition-colors duration-200 hover:text-ink"
+                >
+                  {copiedKey === c.key ? <CheckIcon /> : <CopyIcon />}
+                </button>
+              </div>
             </div>
           ))}
         </div>
