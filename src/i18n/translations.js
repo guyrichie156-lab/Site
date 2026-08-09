@@ -19,12 +19,12 @@ export const translations = {
       contact: 'контакт',
     },
     hero: {
-      country: 'могилёв, беларусь',
+      country: 'минск, беларусь',
       alias: 'darkklra',
       marquee: 'chillvibe — positivevibe — clear mind — ',
     },
     about: {
-      bio: 'работаю на «светоприборе» инженером-технологом то — устроился в сентябре 2025-го, диплом получил в том же году. руки заточены под cad/cam, параллельно осваиваю it — пока на уровне «руками потрогал».',
+      bio: 'родом из могилёва, сейчас живу в минске. работаю на «светоприборе» инженером-технологом то — устроился в сентябре 2025-го, диплом получил в том же году. руки заточены под cad/cam, параллельно осваиваю it — пока на уровне «руками потрогал».',
       groups: [
         { title: 'cad/cam', items: ['creo', 'компас-3d', 'mastercam', 'solidworks', 'autocad'] },
         { title: 'it', items: ['python', 'docker', 'kubernetes', 'jenkins', 'nginx', 'apache'] },
@@ -63,12 +63,12 @@ export const translations = {
       contact: 'contact',
     },
     hero: {
-      country: 'mogilev, belarus',
+      country: 'minsk, belarus',
       alias: 'darkklra',
       marquee: 'chillvibe — positivevibe — clear mind — ',
     },
     about: {
-      bio: 'maintenance technologist engineer at "svetopribor" — joined in september 2025, got my degree the same year. day job runs on cad/cam, on the side i\'m picking up it — still at the hands-on-basics level.',
+      bio: 'grew up in mogilev, now based in minsk. maintenance technologist engineer at "svetopribor" — joined in september 2025, got my degree the same year. day job runs on cad/cam, on the side i\'m picking up it — still at the hands-on-basics level.',
       groups: [
         { title: 'cad/cam', items: ['creo', 'kompas-3d', 'mastercam', 'solidworks', 'autocad'] },
         { title: 'it', items: ['python', 'docker', 'kubernetes', 'jenkins', 'nginx', 'apache'] },
