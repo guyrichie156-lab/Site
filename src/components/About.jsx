@@ -2,8 +2,19 @@ import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { useLanguage } from '../context/LanguageContext.jsx'
 
+const ACCENT = 'oklch(0.82 0.09 48)'
+
+// часы наиграно в steam, по убыванию
+const GAMES = [
+  { name: 'Counter-Strike 2', hours: 1694.6 },
+  { name: 'Rust', hours: 1218.6 },
+  { name: 'STALZONE', hours: 1191.8 },
+  { name: 'Apex Legends', hours: 516.8 },
+  { name: 'PUBG: BATTLEGROUNDS', hours: 316.4 },
+]
+
 export default function About() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   const groups = t('about.groups')
   const scopeRef = useRef(null)
 
@@ -47,8 +58,39 @@ export default function About() {
               </div>
             </div>
           ))}
+
+          <div data-reveal>
+            <div className="text-xs uppercase tracking-[0.2em] text-muted">{t('about.gamesTitle')}</div>
+            <GamesChart lang={lang} unit={t('about.hoursUnit')} />
+          </div>
         </div>
       </div>
     </main>
+  )
+}
+
+function GamesChart({ lang, unit }) {
+  const max = Math.max(...GAMES.map((g) => g.hours))
+  const locale = lang === 'ru' ? 'ru-RU' : 'en-US'
+
+  return (
+    <div className="mt-4 flex flex-col gap-3">
+      {GAMES.map((g) => (
+        <div key={g.name} className="flex items-center gap-3">
+          <span className="w-28 shrink-0 truncate text-xs lowercase tracking-wide text-muted md:w-40">
+            {g.name}
+          </span>
+          <div className="h-[10px] flex-1 overflow-hidden rounded-r-[4px] bg-ink/10">
+            <div
+              className="h-full rounded-r-[4px]"
+              style={{ width: `${(g.hours / max) * 100}%`, background: ACCENT }}
+            />
+          </div>
+          <span className="w-16 shrink-0 text-right text-xs tabular-nums text-muted">
+            {Math.round(g.hours).toLocaleString(locale)} {unit}
+          </span>
+        </div>
+      ))}
+    </div>
   )
 }

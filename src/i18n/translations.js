@@ -30,6 +30,8 @@ export const translations = {
         { title: 'it', items: ['python', 'docker', 'kubernetes', 'jenkins', 'nginx', 'apache'] },
         { title: 'медиа', items: ['premiere pro', 'photoshop'] },
       ],
+      gamesTitle: 'во что играю',
+      hoursUnit: 'ч',
     },
     contact: {
       note: 'пиши куда удобнее — быстрее всего отвечаю в telegram.',
@@ -74,6 +76,8 @@ export const translations = {
         { title: 'it', items: ['python', 'docker', 'kubernetes', 'jenkins', 'nginx', 'apache'] },
         { title: 'media', items: ['premiere pro', 'photoshop'] },
       ],
+      gamesTitle: 'what i play',
+      hoursUnit: 'h',
     },
     contact: {
       note: 'reach out wherever is easiest — telegram gets the fastest reply.',
