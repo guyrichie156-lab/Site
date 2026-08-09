@@ -8,9 +8,9 @@ import { useLanguage } from '../context/LanguageContext.jsx'
  * Фазы: load (счётчик) -> ready (кнопка) -> closing (вайп) -> done.
  * Сайт под оверлеем "наплывает": scale + blur (см. #site-root в App.jsx).
  */
-const LOADER_SECONDS = 1.6
-const REVEAL_SECONDS = 1.2
-const WIPE = 'inset(0 0 100% 0)' // вайп вверх; вниз: 'inset(100% 0 0 0)'
+const LOADER_SECONDS = 2
+const REVEAL_SECONDS = 0.9
+const WIPE = 'inset(50% 0 50% 0)' // из центра; вверх: 'inset(0 0 100% 0)'; вниз: 'inset(100% 0 0 0)'
 const ONCE_PER_SESSION = true
 
 const easeOutExpo = (p) => (p >= 1 ? 1 : 1 - Math.pow(2, -10 * p))
@@ -139,7 +139,11 @@ export default function Intro() {
 
         {/* полоса прогресса */}
         <div className="relative h-px w-[min(320px,56vw)] overflow-hidden bg-ink/15">
-          <div ref={barRef} className="absolute inset-0 origin-left scale-x-0 bg-ink" />
+          <div
+            ref={barRef}
+            className="absolute inset-0 origin-left scale-x-0"
+            style={{ background: 'oklch(0.82 0.09 48)' }}
+          />
         </div>
 
         {/* фиксированная высота, чтобы вёрстка не прыгала при смене фазы */}
@@ -155,7 +159,7 @@ export default function Intro() {
             <>
               <button
                 onClick={enter}
-                className="rounded-full border border-ink/20 px-[30px] py-2.5 text-sm lowercase tracking-[0.16em] transition-all duration-300 hover:bg-ink hover:text-paper hover:tracking-[0.22em]"
+                className="rounded-full border border-ink/30 px-[30px] py-2.5 text-sm lowercase tracking-[0.16em] backdrop-blur-sm transition-all duration-300 hover:bg-ink hover:text-paper hover:tracking-[0.22em]"
               >
                 {t('intro.enter')}
               </button>
