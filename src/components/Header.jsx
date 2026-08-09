@@ -22,11 +22,11 @@ export default function Header() {
   const labelRef = useRef(null)   // подпись на кнопке (меню/закрыть)
   const tlRef = useRef(null)
 
+  // "контакт" сюда не добавляем — на /contact уже ведёт кнопка "связь"
   const links = [
     { to: '/', key: 'nav.home' },
     { to: '/works', key: 'nav.works' },
     { to: '/about', key: 'nav.about' },
-    { to: '/contact', key: 'nav.contact' },
   ]
 
   // Один timeline создаём заранее, дальше только play/reverse — так
